@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply max-w-[90rem] p-5 w-full mx-auto
+}
+
+@layer components {
+    .banner {
+        @apply bg-insightBanner bg-cover min-h-[60rem] 
+    }
+
+    .header_wrapper {
+        @apply flex justify-between items-center
+    }
+
+    .insight img {
+        @apply max-w-full object-cover;
+    }
+
+    .burger_menu span {
+        @apply w-[2rem] h-[.3rem] bg-light block rounded-full transition-all;
+    }
+    
+    .burger_menu span:nth-child(2) {
+        @apply my-1 w-[1.5rem] h-[0.38rem] translate-x-[0.5rem];
+    }
+    
+    .burger_menu span:nth-child(3) {
+        @apply w-[1.1rem] translate-x-[0.9rem]
+    }
+
+    .banner_wrapper {
+        @apply flex flex-col justify-center items-center gap-10 text-center text-light min-h-[40rem] pt-8 md:h-[50rem] md:gap-[3.5rem]
+    }
+
+    .banner_wrapper h1 {
+        @apply font-normal text-5xl leading-[4rem] md:text-7xl md:leading-[6rem]
+    }
+
+    .banner_btn {
+        @apply flex flex-col gap-7 md:flex-row md:gap-5
+    }
+
+    .banner_btn a:first-child {
+        @apply md:px-[3rem]
+    }
+    .banner_btn a:last-child {
+        @apply md:px-[3.5rem]
+    }
+    
+    /* SERVICES */
+
+    .services_title h1 {
+        @apply text-peach font-bold text-4xl
+    }
+
+    .services_wrapper {
+        @apply grid grid-cols-1 pt-[4rem] gap-4 place-items-center md:grid-cols-3 md:gap-6
+    }
+
+    .services_info {
+        @apply mb-[1.8rem] relative md:hover:scale-[1.1]
+    }
+
+    .services_card {
+        @apply flex flex-col justify-center gap-6 border-2 rounded-2xl 
+        shadow-md p-4 pb-[8rem] px-[3rem] text-justify max-w-[26rem] 
+    }
+
+    .services_card h1 {
+        @apply text-2xl font-semibold text-center
+    }
+
+    .services_card ul {
+        @apply px-[1rem] flex flex-col gap-2
+    }
+
+    .services_card ul li {
+        @apply list-disc
+    }
+
+    .services_btn {
+        @apply  text-peach text-center p-5 border-t-2 border-peach absolute bottom-0 w-full group-hover:bg-peach group-hover:text-light
+    }
+
+
+    /* PROJECTS */
+
+
+    .projects_wrapper {
+        @apply grid grid-cols-1 gap-[3rem] md:grid-cols-3 md:gap-0
+    }
+
+    .projects_info {
+        @apply min-h-[50rem] max-w-full bg-no-repeat bg-cover flex justify-center items-center
+        relative z-0
+    }
+
+    .projects_info::before {
+        @apply md:bg-black opacity-50 -z-20 content-[""] w-full h-full absolute
+        top-0 hover:bg-transparent 
+    }
+    .projects_content {
+        @apply flex flex-col gap-6 items-center justify-center opacity-100 md:opacity-0 hover:opacity-100 transition-all
+    }
+
+    .projects_content::before {
+        @apply bg-black opacity-50 -z-10 content-[""] w-[30rem] h-96 absolute
+        top-[13rem]
+    }
+
+    .projects_content h3 {
+        @apply font-semibold text-3xl text-center 
+    }
+
+    .projects_content p {
+        @apply font-normal text-justify mb-8 text-wrap text-lg px-[6rem]
+    }
+
+    .projects_content a {
+        @apply py-[0.5rem] px-[1rem] rounded-2xl w-[10rem] text-center hover:text-peach hover:bg-light
+    }
+
+    /* CONTACTS */
+
+    .contacts {
+        @apply md:h-[36rem] md:relative
+    }
+
+    .contacts_title h1 {
+        @apply text-3xl text-peach font-bold
+    }
+
+    .contacts_wrapper {
+        @apply flex flex-col-reverse justify-center md:flex 
+        md:flex-row md:justify-start md:gap-24
+    }
+
+    .contacts_form {
+        @apply border-2 border-gray-100 p-5 rounded-xl shadow-md 
+        md:w-[30rem] md:pb-7 md:bg-light md:z-50
+    }
+
+    .contacts_form input, textarea {
+        @apply border-2 border-gray-300 rounded-md py-2 outline-none
+    }
+
+    .contacts_form form {
+        @apply flex flex-col gap-3
+    }
+
+    .btn.submit {
+        @apply ml-auto p-[0.5rem] w-[10rem] rounded-3xl bg-peach text-light border-none
+    }
+
+    .contact_icons {
+        @apply flex flex-row flex gap-3 items-center
+    }
+
+    /* FOOTER */
+
+    .footer_wrapper {
+        @apply flex flex-col gap-3 justify-center items-center md:flex-row md:justify-between
+    }
+
+}
+
+@layer utilities {
+    .btn {
+        @apply inline-block p-[1rem] rounded-full border-transparent border-[1px] 
+        text-lg font-normal py-[0.8rem] px-[7rem];
+    }
+
+    .btn.bg--light {
+        @apply border-light 
+    }
+
+}
