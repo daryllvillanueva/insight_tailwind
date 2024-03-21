@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <section class="banner">
+    <section class="banner" id="banner">
         <div class="container">
             <header class="header">
                 <div class="header_wrapper">
-                    <div class="insight">
-                        <img src="../dist/img/logo.png" alt="">
-                        <ul class="header_navd hidden">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">Contacts</a></li>
-                        </ul>
-                    </div>
+                    <a href=""><img src="../dist/img/logo.png" alt=""></a>
                     <div class="header_action">
-                        <ul class="header_navm hidden">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">Contacts</a></li>
-                        </ul>
+                        <div class="header_nav">
+                            <ul>
+                                <li><a href="#banner">Home</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contacts">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="header_icons">
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="header_logo">
+                            <a href="" class="logo_open"><img src="../dist/img/logo.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="burger_menu">
                         <span></span>
@@ -48,7 +50,8 @@
         </div>
     </section>
 
-    <section class="services pt-5 pb-20">
+
+    <section class="services pt-5 pb-20" id="services">
         <div class="container">
             <div class="services_title text-center md:text-left pl-6">
                 <h1 class="mb-3">Services</h1>
@@ -110,23 +113,23 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="projects_wrapper text-light">
-            <div class="projects_info project-1 bg-projects1 object-cover ">
+            <div class="projects_info group bg-projects1 object-cover ">
                 <div class="projects_content">
                     <h3>Kitchen</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, consequuntur odit! Minima ducimus placeat ab. Incidunt molestias debitis esse eius.</p>
                     <a href="" class="btn bg-peach">See projects</a>
                 </div>
             </div>
-            <div class="projects_info  project-2 bg-projects2 object-cover">
+            <div class="projects_info group bg-projects2 object-cover">
                 <div class="projects_content">
                     <h3>Bathroom</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, consequuntur odit! Minima ducimus placeat ab. Incidunt molestias debitis esse eius.</p>
                     <a href="" class="btn bg-peach">See projects</a>
                 </div>
             </div>
-            <div class="projects_info project-3 bg-projects3 object-cover">
+            <div class="projects_info group bg-projects3 object-cover">
                 <div class="projects_content">
                     <h3>Living Room</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, consequuntur odit! Minima ducimus placeat ab. Incidunt molestias debitis esse eius.</p>
@@ -136,7 +139,7 @@
         </div>
     </section>
 
-    <section class="contacts pt-12 mb-10">
+    <section class="contacts pt-12 mb-10" id="contacts">
         <div class="container">
             <div class="contacts_title text-center mb-10 md:text-left">
                 <h1 class="mb-3">Contacts</h1>
@@ -165,19 +168,19 @@
     <footer class="footer py-4 md:z-0 md:relative md:pt-10 bg-gray-600 text-light">
         <div class="container">
             <div class="footer_wrapper">
-                <img src="../dist/img/logo.png" class="md:order-2" alt="">
-                <ul class="flex gap-9 text-lg md:order-1">
+                <a href=""><img src="../dist/img/logo.png" class="md:order-3" alt=""></a>
+                <ul class="flex gap-9 text-lg md:order-4">
                     <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-slack"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
                 </ul>
-                <p class="md:order-3">All rights reserved.</p>
+                <p class="md:order-[-2]">All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-
+    <script src="../dist/js/script.js"></script>
 
 </body>
 </html>

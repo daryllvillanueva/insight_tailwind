@@ -15,8 +15,75 @@
         @apply flex justify-between items-center
     }
 
-    .insight img {
+    .header_wrapper img {
         @apply max-w-full object-cover;
+    }
+
+    .header_action {
+        @apply flex flex-col bg-dark absolute md:top-[6.2rem] right-0 w-0 h-[90vh] px-0 pt-0 overflow-hidden transition-all 
+        shadow-md top-0 md:static md:h-fit md:w-fit items-center md:shadow-none md:bg-transparent;
+    }
+
+    .header_action.open {
+        @apply fixed w-full h-full px-10 pt-10 transition-all;
+        z-index: 49;
+    } 
+
+    .header_action .header_nav {
+        @apply pb-5 flex flex-col gap-5 md:hidden;
+    }
+
+    .header_action .header_logo {
+        @apply flex flex-row justify-center md:hidden mt-6
+    }
+
+    .header_action .header_icons {
+        @apply flex flex-row justify-center gap-5 md:hidden mt-6
+    }
+
+    .header_action .header_icons i:last-child {
+        @apply px-5 py-5 hover:text-blue-800 hover:bg-light;
+    }
+    
+    .header_action .header_icons i {
+        @apply text-xl text-light
+    }
+
+    .header_action .header_nav li:hover a {
+        @apply text-peach;
+    }
+
+    .header_action .header_nav li a {
+        @apply font-medium text-xl text-light px-7 py-4 hover:bg-light;
+    }
+
+    .header_action.open .header_nav li a {
+        @apply text-2xl flex flex-col items-center
+    }
+
+    .header_action .header_nav {
+        @apply border-b-gray-400
+        pb-5 flex flex-col gap-5;
+    }
+
+    .header_action .header_nav ul {
+        @apply flex flex-col gap-5 pt-36 md:flex md:flex-row md:gap-3 md:pt-2;
+    }
+
+    .header_action.open .header_nav ul {
+        @apply gap-[2rem];
+    }
+
+    .header_action .header_nav li:hover a {
+        @apply text-peach;
+    }
+
+    .header_action .header_nav li a {
+        @apply font-medium text-lg text-light;
+    }
+
+    .burger_menu {
+        @apply md:hidden relative z-50 block;
     }
 
     .burger_menu span {
@@ -31,8 +98,38 @@
         @apply w-[1.1rem] translate-x-[0.9rem]
     }
 
+    .burger_menu.open span:first-child {
+        @apply transform translate-y-[10px] rotate-[225deg] transition-all;
+    }
+
+    .burger_menu.open span:nth-child(2) {
+        @apply opacity-0 transition-all;
+    }
+
+    .burger_menu.open span:last-child {
+        @apply w-[2rem] transform translate-y-[-9px] translate-x-[1px] rotate-[-225deg] transition-all;
+    }
+
+    .header_action.open .burger__menu {
+        @apply block;
+    }
+
+    .header {
+        @apply px-[1rem] transition-all duration-300 ease-in z-50
+    }
+
+    .header.sticky {
+        @apply md:fixed md:top-0 md:w-full md:rounded-xl md:py-1 md:mt-10 md:max-w-[87.5rem]
+    }
+
+    .scroll-bg-black {
+        @apply md:bg-black
+    }
+
+    /* BANNER */
+
     .banner_wrapper {
-        @apply flex flex-col justify-center items-center gap-10 text-center text-light min-h-[40rem] pt-8 md:h-[50rem] md:gap-[3.5rem]
+        @apply flex flex-col justify-center items-center gap-10 text-center text-light min-h-[40rem] pt-8 md:h-[48rem] md:gap-[3.5rem]
     }
 
     .banner_wrapper h1 {
@@ -99,15 +196,15 @@
     }
 
     .projects_info::before {
-        @apply md:bg-black opacity-50 -z-20 content-[""] w-full h-full absolute
-        top-0 hover:bg-transparent 
+        @apply md:bg-black opacity-50 -z-20 content-[""] w-full h-full absolute 
+        top-0 hover:bg-transparent  md:duration-500 md:ease-in-out md:hover:scale-0;  
     }
     .projects_content {
-        @apply flex flex-col gap-6 items-center justify-center opacity-100 md:opacity-0 hover:opacity-100 transition-all
+        @apply flex flex-col gap-6 items-center justify-center opacity-100 md:opacity-0 hover:opacity-100 transition-all group-hover:opacity-100 max-w-[28rem]
     }
 
     .projects_content::before {
-        @apply bg-black opacity-50 -z-10 content-[""] w-[30rem] h-96 absolute
+        @apply bg-black opacity-50 -z-10 content-[""] w-[28rem] h-96 absolute
         top-[13rem]
     }
 
@@ -116,7 +213,7 @@
     }
 
     .projects_content p {
-        @apply font-normal text-justify mb-8 text-wrap text-lg px-[6rem]
+        @apply font-normal text-justify mb-8 text-wrap text-lg max-w-sm
     }
 
     .projects_content a {
@@ -139,12 +236,12 @@
     }
 
     .contacts_form {
-        @apply border-2 border-gray-100 p-5 rounded-xl shadow-md 
+        @apply border-2 p-5 rounded-xl shadow-md 
         md:w-[30rem] md:pb-7 md:bg-light md:z-50
     }
 
     .contacts_form input, textarea {
-        @apply border-2 border-gray-300 rounded-md py-2 outline-none
+        @apply border-2 border-gray-300 rounded-md py-2
     }
 
     .contacts_form form {
@@ -152,17 +249,17 @@
     }
 
     .btn.submit {
-        @apply ml-auto p-[0.5rem] w-[10rem] rounded-3xl bg-peach text-light border-none
+        @apply ml-auto p-[0.5rem] w-[10rem] rounded-3xl bg-peach text-light border-none hover:bg-light hover:text-peach
     }
 
     .contact_icons {
-        @apply flex flex-row flex gap-3 items-center
+        @apply flex flex-row gap-3 items-center
     }
 
     /* FOOTER */
 
     .footer_wrapper {
-        @apply flex flex-col gap-3 justify-center items-center md:flex-row md:justify-between
+        @apply flex flex-col gap-3 justify-center items-center md:flex-row-reverse md:justify-between
     }
 
 }
