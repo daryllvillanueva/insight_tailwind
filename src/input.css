@@ -182,9 +182,7 @@
         @apply  text-peach text-center p-5 border-t-2 border-peach absolute bottom-0 w-full group-hover:bg-peach group-hover:text-light
     }
 
-
     /* PROJECTS */
-
 
     .projects_wrapper {
         @apply grid grid-cols-1 gap-[3rem] md:grid-cols-3 md:gap-0
